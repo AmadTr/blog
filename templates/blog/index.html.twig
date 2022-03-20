@@ -3,5 +3,16 @@
 {% block title %}Hello BlogController!{% endblock %}
 
 {% block body %}
-<h1>Bienvenue sur ma liste d'article</h1>
+    <div class="articles">
+    
+        <h1 class="test">Bienvenue a mon SymBlog</h1>
+
+        {% for art in articles %}
+            <div class="art">
+                <h3>{{art.title}}</h3>
+                <p>{{art.content}}</p>
+                <a href="{{path('art-detail', {'id': art.id}) }}" class= "btn btn-warning">Détail</a>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}

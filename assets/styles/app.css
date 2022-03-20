@@ -1,3 +1,18 @@
-body {
-    background-color: lightgray;
+
+h1{
+    color: rgb(169, 203, 243);
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 0px;
 }
+.articles{
+    background-color: rgb(27, 27, 27);
+    padding: 0px 10%;
+}
+
+.art{
+    margin: 20px 0px;
+    padding: 10px 50px;
+    background-color: rgb(11, 2, 32);
+}
+
