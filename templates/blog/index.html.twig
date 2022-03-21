@@ -9,9 +9,9 @@
 
         {% for art in articles %}
             <div class="art">
-                <h3>{{art.title}}</h3>
+                <h3 class="sousTitre">{{art.title}}</h3>
                 <p>{{art.content}}</p>
-                <a href="{{path('art-detail', {'id': art.id}) }}" class= "btn btn-warning">Détail</a>
+                <a href="{{path('art-detail', {'id': art.id}) }}" class= "btn btn-success">Détail</a>
             </div>
         {% endfor %}
     </div>

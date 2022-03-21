@@ -1,16 +1,35 @@
+.contenu{
+    background-color: rgb(251, 246, 239);
+    color: rgb(251, 246, 239);
+
+}
+
+.blue{
+    color: rgb(38, 79, 119);
+}
+
 h1.test{
     font-weight: bold;
     text-align: center;
-    padding: 5px 0px;
+    padding: 5% 0px;
+    color: rgb(38, 79, 119);
+
+}
+.sousTitre{
+    text-align: center;
+    margin-bottom: 3%;
 }
 .articles{
-    background-color: rgb(255, 190, 85);
-    padding: 0px 10%;
+    padding: 0px 20%;
 }
 
 .art{
-    margin: 20px 0px;
-    padding: 10px 50px;
-    background-color: rgb(3, 4, 5);
+    margin: 30px 0px;
+    padding: 20px 50px;
+    background-color: rgb(38, 79, 119);
+    border-radius: 10px;
+}
+p{
+    font-size: 1.2em;
 }
 

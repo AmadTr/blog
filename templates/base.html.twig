@@ -12,10 +12,10 @@
         {# {% block javascripts %} #}
             {{ encore_entry_script_tags('app') }}
         {# {% endblock %} #}
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/cyborg/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/flatly/bootstrap.css">
     </head>
-    <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <body class="contenu">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">SymBlog</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,6 +39,8 @@
     </div>
   </div>
 </nav>
-        {% block body %}{% endblock %}
+  <div>
+      {% block body %}{% endblock %}
+  </div>
     </body>
 </html>
