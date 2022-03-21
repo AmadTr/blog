@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ArticleRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ArticleRepository::class)
@@ -19,13 +20,29 @@ class Article
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(
+     * min=10,
+     * max=255,
+     * minMessage= "le titre doit contenir au moins 10 caractère",
+     * maxMessage= "le titre doit contenir au maximum 255 caractère")
      */
     private $title;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\Length(
+     * min=10,
+     * max=255,
+     * minMessage= "le titre doit contenir au moins 10 caractère",
+     * maxMessage= "le titre doit contenir au maximum 255 caractère")
+     * 
      */
     private $content;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="articles")
+     */
+    private $category;
 
     public function getId(): ?int
     {
@@ -52,6 +69,18 @@ class Article
     public function setContent(string $content): self
     {
         $this->content = $content;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }

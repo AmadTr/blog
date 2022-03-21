@@ -1,7 +1,13 @@
 {% extends 'base.html.twig' %}
-{% block title %}Article Detailé{% endblock %}
+
+{% block title %}
+    Article Detailé
+{% endblock %}
+
 {% block body %}
-<h1>Article Détailé</h1>
-<h3>{{article.title}}</h3>
-<h3>{{article.content}}</h3>
+    <h1>Article Détailé</h1>
+    <h3>{{article.title}}</h3>
+    <h3>{{article.content}}</h3>
+    <a href="{{path('art-edit',{'id' : article.id}) }}" class="btn btn-success">Modifier l'article</a>
+    <a href="{{path('art-delete',{'id' : article.id}) }}" class="btn btn-danger">Supprimer l'article</a>
 {% endblock %}
