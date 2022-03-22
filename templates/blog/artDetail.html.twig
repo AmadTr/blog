@@ -6,8 +6,26 @@
 
 {% block body %}
     <h1 class="test">Article Détailé</h1>
-    <h3 class="blue sousTitre">{{article.title}}</h3>
-    <p class="blue">{{article.content}}</p>
+    <h3 class="sousTitre blue">{{article.title}} <span><h3 class="cat">Catégorie : {{article.category.title}}</h3></span></h3>
+    <h3 class="blue">{{article.content}}</h3>
+
+    <h2 class="blue">Commentaires</h2>
+    <hr>
+    <div class "comments">
+        {% for comment in comments %} 
+            <div class="row">
+                <div class="col-2">
+                    <h3 class="cat">{{comment.auteur}}</h3>
+                </div>
+                <div class="col">
+                    <p class="blue">{{comment.remark}}</p>
+                </div>
+                <hr>
+        {% endfor %}
+                </div>
+            </div>
+
     <a href="{{path('art-edit',{'id' : article.id}) }}" class="btn btn-outline-success">Modifier l'article</a>
     <a href="{{path('art-delete',{'id' : article.id}) }}" class="btn btn-outline-danger">Supprimer l'article</a>
+    <a href="{{path('add-com',{'id' : article.id}) }}" class="btn btn-outline-primary">Ajouter un commentaire</a>
 {% endblock %}

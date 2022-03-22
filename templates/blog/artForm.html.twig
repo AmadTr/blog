@@ -15,8 +15,9 @@
 
 <div class="container">
     {{form_start(formArticle)}}
-        {{form_row(formArticle.title, {'attr':{'placeholder':"Entrez le titre de l'article"}}) }}
-        {{form_row(formArticle.content, {'attr':{'placeholder':"Entrez le contenu de l'article"}}) }}
+        {{form_row(formArticle.title, {'label':"Titre", 'attr':{'placeholder':"Entrez le titre de l'article"}}) }}
+        {{form_row(formArticle.category,{'label':"Catégorie"}  ) }}
+        {{form_row(formArticle.content, {'label':"Contenu de l'article", 'attr':{'placeholder':"Entrez le contenu de l'article"}}) }}
     {% if mode %}
         <button type="submit" class="btn btn-outline-success">Mettre à jour l'article</button>
         

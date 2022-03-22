@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    Symblog : Ajouter un commentaire
+{% endblock %}
+
+{% block body %}
+        <h1 class="test">Creer un Commentaire</h1>        
+
+<div class="container">
+    {{form_start(form)}}
+        {{form_row(form.auteur, {'label':"Auteur", 'attr':{'placeholder':"Entrez votre nom"}}) }}
+        {{form_row(form.remark, {'label':"Contenu de la remarque", 'attr':{'placeholder':"Entrez le contenu"}}) }}
+        <button type="submit" class="btn btn-outline-info">Creer le Commentaire</button>   
+
+    {{form_end(form)}}
+</div>
+{% endblock %}
