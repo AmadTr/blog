@@ -6,6 +6,11 @@
     <div class="articles">
     
         <h1 class="test">Bienvenue a mon SymBlog</h1>
+        {% if app.user %}      
+        <h4>Bienvenue {{app.user.username}}</h4>
+        {% else %}
+        <h4>Anonymous</h4>
+        {% endif %}
 
         {% for art in articles %}
             <div class="art">
